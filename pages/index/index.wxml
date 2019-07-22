@@ -1,0 +1,48 @@
+<view class="page">
+  <!-- banner -->
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" current="{{current}}" bindchange="swiperChange" circular="true" indicator-active-color="#1AAD19">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item bindtap="swiperClick">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <!-- tips -->
+  <view bindtap='mzsm' class="weui-cells__title tips_gg bgFFF padtb">公告：【平台免责声明】 </view>
+  <!-- 我的信息 -->
+  <view class="weui-cells__title fa_bu_wrap bgFFF padtb">
+    <!-- bindtap='goMyCenter' -->
+    <button class='my_fabu' open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+      <image src='/imgs/user.png'></image>
+      <text>我的发布</text>
+    </button>
+    <view class='my_find'>
+      <button bindtap="goFindPerson" class="weui-btn bg_btn" type="">发布找人</button>
+    </view>
+  </view>
+  <!-- 筛选信息 -->
+  <view class="weui-cells__title info_wrap bgFFF padtb">
+    <text class="fb_info isOn"> 全部信息</text>
+    <text bindtap='goSelect' class="fb_info sx_info">筛选信息</text>
+  </view>
+  <!-- 展示列表 -->
+  <view class='weui-cells__title list_felx bgFFF'>
+    <list-view viewList="{{list_info}}" bindmyevent="telPhone" />
+  </view>
+
+  <view class='tips_bot'>
+    <view wx:if="{{moreJiazai}}" class="weui-loadmore">
+      <view class="weui-loadmore__tips">上拉加载更多</view>
+    </view>
+    <view wx:if="{{nullData }}" class="weui-loadmore weui-loadmore_line">
+      <view class="weui-loadmore__tips weui-loadmore__tips_in-line">暂无更多数据</view>
+    </view>
+    <view wx:if="{{loadmores }}" class="weui-loadmore">
+      <view class="weui-loading"></view>
+      <view class="weui-loadmore__tips">正在加载</view>
+    </view>
+  </view>
+
+
+
+</view>

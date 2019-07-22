@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/findPerson/findPerson",
+    "pages/aboutMe/aboutMe",
+    "pages/disclaimer/disclaimer",
+    "pages/serchInfo/serchInfo",
+    "pages/fblist/fblist",
+    "pages/userCenter/userCenter",
+    "pages/logs/logs"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00C4B8",
+    "navigationBarTitleText": "淮安拼车",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#00C4B8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/imgs/home.png",
+        "selectedIconPath": "/imgs/home_s.png"
+      },
+      {
+        "pagePath": "pages/aboutMe/aboutMe",
+        "text": "关于作者",
+        "iconPath": "/imgs/user.png",
+        "selectedIconPath": "/imgs/user_s.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

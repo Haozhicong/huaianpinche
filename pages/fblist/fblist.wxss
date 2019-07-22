@@ -1,0 +1,10 @@
+/* pages/fblist/fblist.wxss */
+.bgFFF{
+  background: #fff;
+}
+.list_felx {
+  display: flex;
+  flex-direction: column;
+  margin-top: -0.77em;
+  padding-top: 0.77em;
+}

@@ -1,0 +1,54 @@
+<!--pages/aboutMe/aboutMe.wxml-->
+<view class="bgFff">
+  <view class='wrap_f'>
+    <view class='imgT'>
+      <image src='/imgs/timg.jpg'></image>
+    </view>
+    <view class='img_Info'>
+      <view>
+        icon 一个90后前端开发工程师
+      </view>
+      <view>
+        就职于上海翊芃网络科技有限公司
+      </view>
+      <view>
+        竭力网络工作室创始人
+      </view>
+    </view>
+  </view>
+  <view class='about-tit'>
+    <view class='a_tit'>关于淮安拼车</view>
+    <view class="about-con">
+      由于自己在上海工作，回去的次数也比较频繁。每次都要到QQ群/微信群中发布信息，对于只使用微信的我实属不便，于是就想到了开发微信小程序，背靠微信庞大的用户群体，使用方便，速度快，即用即走不占内存。
+    </view>
+    <view class="about-con">平台免费发布信息，请大家自觉发布有用属实的信息。</view>
+    <view class="about-con">
+      为了平常维护服务器的费用还是需要打赏和接一些广告（生活所迫）。
+    </view>
+  </view>
+  <view class='about-tit'>
+    <view class='a_tit'>关于竭力</view>
+    <view class="about-con">
+      由几个志趣相投合伙人联合成立工作室，承接网站建设，中小企业网站优化，系统定制开发，小程序开发。
+    </view>
+
+    <view class="about-con">
+      尽心竭力，用尽全力
+    </view>
+
+  </view>
+  <view class='about-tit'>
+    <view class='a_tit'>联系/合作方式</view>
+    <view class="about-con contact-wrap">
+      <view class="contact">
+        <image src="/imgs/wx.jpg"></image>
+        <text>请备注说明来意</text>
+      </view>
+      <view class="contact">
+        <image src="/imgs/wxds.png"></image>
+        <text>微信打赏</text>
+      </view>
+    </view>
+  </view>
+
+</view>

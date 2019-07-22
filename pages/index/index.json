@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "list-view": "/components/list_view/list_view"
+  },
+  "enablePullDownRefresh": true
+}

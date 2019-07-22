@@ -1,0 +1,9 @@
+<!--pages/fblist/fblist.wxml-->
+<view class='page'>
+  <view>
+    <image class='' style='width:100%' src='/imgs/fb_list.jpg'></image>
+  </view>
+  <view class='weui-cells__title list_felx bgFFF'>
+    <list-view viewList="{{myfb_info}}" ishow="{{false}}"/>
+  </view>
+</view>

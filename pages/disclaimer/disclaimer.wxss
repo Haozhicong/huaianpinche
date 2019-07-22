@@ -1,0 +1,12 @@
+/* pages/disclaimer/disclaimer.wxss */
+.mini_name{
+  font-size: 20px;
+  text-align: center;
+  color: #f40;
+}
+.siji{
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 15px 0;
+}

@@ -1,0 +1,134 @@
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+
+  <form bindsubmit="formSubmit">
+    <view class="page__bd">
+      <view class="weui-cells__title">请填写基本信息</view>
+      <view class="weui-cells weui-cells_after-title">
+        <!-- 姓名 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">姓名</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="name" placeholder="请填写姓名" />
+          </view>
+        </view>
+        <!-- 性别 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">性别</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker name="sex" bindchange="bindCountryChange" value="{{countryIndex}}" range="{{countries}}">
+              <view class="weui-select weui-select_in-select-after">{{countries[countryIndex]}}</view>
+            </picker>
+          </view>
+        </view>
+        <!-- 手机号码 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">手机号码</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input type='number' name="phone" value="{{form.phone}}" class="weui-input" placeholder="请填写手机号码" />
+          </view>
+        </view>
+      </view>
+      <view class="weui-cells__title">请填写拼车信息</view>
+      <view class="weui-cells weui-cells_after-title">
+        <!-- 出发地 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">出发地</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input"  name="startAdd" placeholder="请填写出发地" />
+          </view>
+        </view>
+        <!-- 目的地 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">目的地</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input"  name="endAdd" placeholder="请填写目的地" />
+          </view>
+        </view>
+        <!-- 途经地 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">途经地</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="midAdd" placeholder="请填写途经地" />
+          </view>
+        </view>
+        <!-- 出发日期 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">出发日期</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="date" name="satrDate" value="{{date}}"  bindchange="bindDateChange">
+              <view class="weui-input">{{date}}</view>
+            </picker>
+          </view>
+        </view>
+        <!-- 出发时间 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">时间</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="time" name="satrTime"  value="{{time}}"  bindchange="bindTimeChange">
+              <view class="weui-input">{{time}}</view>
+            </picker>
+          </view>
+        </view>
+
+        <!-- 乘车人数 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">空位人数</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input type='number' name="numberP" class="weui-input" placeholder="请填写空位人数" />
+          </view>
+        </view>
+        <!-- 车型 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">车型</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input"  name="carName" placeholder="请填写车型" />
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-cells__title">备注</view>
+      <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+          <view class="weui-cell__bd">
+            <textarea class="weui-textarea"  name="rmarked" placeholder="例如：车内禁止吸烟，文明乘坐谢谢！" style="height: 3.3em" />
+          </view>
+        </view>
+      </view>
+      <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            阅读并同意
+            <navigator url="../disclaimer/disclaimer" class="weui-agree__link">《相关条款》</navigator>
+          </view>
+        </label>
+      </checkbox-group>
+      <view class="weui-btn-area">
+        <button form-type='submit' class="weui-btn" disabled='{{isDisabled}}' type="primary" bindtap="showTopTips">确定发布</button>
+      </view>
+    </view>
+  </form>
+</view>

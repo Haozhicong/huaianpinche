@@ -1,0 +1,76 @@
+<!--pages/serchInfo/serchInfo.wxml-->
+<view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+  <form bindsubmit="formSubmit">
+    <view class="page__bd">
+      <view class="weui-cells__title">请填写筛选条件</view>
+      <view class="weui-cells weui-cells_after-title">
+        <!-- 出发地 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">出发地</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="startAdd" placeholder="请填写出发地" />
+          </view>
+        </view>
+        <!-- 目的地 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">目的地</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input class="weui-input" name="endAdd" placeholder="请填写目的地" />
+          </view>
+        </view>
+        <!-- 出发日期 -->
+        <!-- 出发日期 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">出发日期</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="date" name="satrDate" value="{{date}}" bindchange="bindDateChange">
+              <view class="weui-input">{{date}}</view>
+            </picker>
+          </view>
+        </view>
+        <!-- 出发时间 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">时间</view>
+          </view>
+          <view class="weui-cell__bd">
+            <picker mode="time" name="satrTime" value="{{time}}" bindchange="bindTimeChange">
+              <view class="weui-input">{{time}}</view>
+            </picker>
+          </view>
+        </view>
+        <!-- 乘车人数 -->
+        <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+            <view class="weui-label">乘车人数</view>
+          </view>
+          <view class="weui-cell__bd">
+            <input type='number' name="numberP" class="weui-input" placeholder="请填写乘车人数" />
+          </view>
+        </view>
+      </view>
+      <!-- 相关条例 -->
+      <checkbox-group bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+          <view class="weui-agree__text">
+            <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+            <view class="weui-agree__checkbox-icon">
+              <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+            </view>
+            阅读并同意
+            <navigator url="../disclaimer/disclaimer" class="weui-agree__link">《相关条款》</navigator>
+          </view>
+        </label>
+      </checkbox-group>
+      <view class="weui-btn-area">
+        <button class="weui-btn" form-type='submit' disabled='{{isDisabled}}' type="primary" bindtap="showTopTips">确定筛选</button>
+      </view>
+    </view>
+  </form>
+</view>

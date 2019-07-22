@@ -1,0 +1,14 @@
+<!--pages/userCenter/userCenter.wxml-->
+<view class="page">
+  <view class="userT">
+    <image class="userinfo-avatar" src="{{userinfo.avatarUrl}}" mode="cover"></image>
+    <view class="userinfo-nickname">{{userinfo.nickName}}</view> 
+  </view>
+</view>
+<!-- 列表问题 -->
+<view class='list_f fb' bindtap='fb_list'>
+  <text class='iconfont icon-fabu'></text> 发布记录
+</view>
+<view class='list_f'>
+  <text class='iconfont icon-fankui'></text> 反馈问题
+</view>

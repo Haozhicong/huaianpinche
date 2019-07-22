@@ -1,0 +1,31 @@
+/* components/list_view/list_view.wxss */
+.list_wrap {
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+.fir_view{
+  margin-top: 8px;
+  overflow: hidden;
+  margin-bottom: 6px
+}
+.view_one{
+  padding: 5px 10px;
+  background: #8F54FC;
+  color: #fff;
+  float: left
+}
+.view_contacts{
+  float: right;
+  background: #1AAD19;
+}
+.fgx_tit{
+  margin: 0 15px;
+  font-size: 14px;
+  vertical-align: middle;
+  margin-top: -5px;
+  display: inline-block;
+}
+.list_one{
+  font-weight: bold;
+  color: #212121;
+}

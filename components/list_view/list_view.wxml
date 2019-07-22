@@ -1,0 +1,41 @@
+<!--components/list_view/list_view.wxml-->
+<!-- 展示列表 -->
+<view class="weui-cells__title">
+  <block wx:for="{{viewList}}" wx:key="key">
+    <view class='list_wrap'>
+      <view>
+        <text class='info_l list_one'>{{item.icon_satrDate}} {{item.icon_satrTime}}</text>
+        <text class='fgx_tit'>|</text>  
+        <text>{{item.icon_numberP}}人</text>
+      </view>
+      <view>
+        <text class='info_l'>出发地：</text>
+        <text>{{item.icon_startAdd}}</text>
+      </view>
+      <view>
+        <text class='info_l'>目的地：</text>
+        <text>{{item.icon_endAdd}}</text>
+      </view>
+      <view>
+        <text class='info_l'>途径地：</text>
+        <text>{{item.icon_midAdd}}</text>
+      </view>
+      <view>
+        <text class='info_l'>车型：</text>
+        <text>{{item.icon_carName}}</text>
+      </view>
+      <view>
+        <text class='info_l'>备注：</text>
+        <text>{{item.icon_rmarked}}</text>
+      </view>
+      <view>
+        <text class='info_l'>联系电话：</text>
+        <text>{{item.icon_phone}}</text>
+      </view>
+      <view class='fir_view'>
+        <text class="view_one">{{item.icon_name}}</text>
+        <text wx:if="{{ishow}}" bindtap='onTap' data-phone='{{item.icon_phone}}' class="view_one view_contacts">拨号</text>
+      </view>
+    </view>
+  </block>
+</view>
